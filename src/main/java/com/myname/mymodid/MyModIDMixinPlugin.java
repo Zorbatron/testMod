@@ -5,17 +5,17 @@ import java.util.List;
 import java.util.Map;
 
 import net.minecraftforge.common.ForgeVersion;
-import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.MCVersion;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.Name;
 
 import org.jetbrains.annotations.Nullable;
 
-import zone.rong.mixinbooter.ILateMixinLoader;
+import zone.rong.mixinbooter.IEarlyMixinLoader;
 
-@IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
-@IFMLLoadingPlugin.Name("MyModIDCore")
-@Optional.Interface(iface = "zone.rong.mixinbooter.ILateMixinLoader", modid = "mixinbooter")
-public class MyModIDMixinPlugin implements IFMLLoadingPlugin, ILateMixinLoader {
+@Name("MyModIDMixinPlugin")
+@MCVersion(ForgeVersion.mcVersion)
+public class MyModIDMixinPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
     @Override
     public String[] getASMTransformerClass() {

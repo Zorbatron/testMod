@@ -1,6 +1,6 @@
 {
   "package": "com.myname.mymodid.mixins",
-  "refmap": "mixins.zbgt.refmap.json",
+  "refmap": "mixins.mymodid.refmap.json",
   "target": "@env(DEFAULT)",
   "minVersion": "0.8",
   "compatibilityLevel": "JAVA_8",
