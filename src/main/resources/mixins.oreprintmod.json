@@ -1,0 +1,10 @@
+{
+  "package": "com.zorbatron.oreprintmod.mixins",
+  "refmap": "mixins.oreprintmod.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": ["OrePrintMixin"],
+  "client": [],
+  "server": []
+}

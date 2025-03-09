@@ -1,21 +1,21 @@
-package com.myname.mymodid;
+package com.zorbatron.oreprintmod;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
 import net.minecraftforge.common.ForgeVersion;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
-import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.MCVersion;
-import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.Name;
 
 import org.jetbrains.annotations.Nullable;
 
-import zone.rong.mixinbooter.IEarlyMixinLoader;
+import zone.rong.mixinbooter.ILateMixinLoader;
 
-@Name("MyModIDMixinPlugin")
-@MCVersion(ForgeVersion.mcVersion)
-public class MyModIDMixinPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
+@IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
+@IFMLLoadingPlugin.Name(OrePrintModCore.MODID)
+@Optional.Interface(iface = "zone.rong.mixinbooter.ILateMixinLoader", modid = "mixinbooter")
+public class OrePrintModMixinPlugin implements IFMLLoadingPlugin, ILateMixinLoader {
 
     @Override
     public String[] getASMTransformerClass() {
@@ -43,8 +43,8 @@ public class MyModIDMixinPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader 
 
     @Override
     public List<String> getMixinConfigs() {
-        System.out.println("Loading mymodid mixins!");
+        System.out.println("Registering OrePrintMod mixin configurations!");
 
-        return Collections.singletonList("mixins.mymodid.json");
+        return Collections.singletonList("mixins.oreprintmod.json");
     }
 }

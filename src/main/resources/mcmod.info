@@ -1,7 +1,7 @@
 [{
     "modid": "${modid}",
     "name": "${modname}",
-    "description": "An example mod for Minecraft 1.12.2 with Forge",
+    "description": "A tiny mod to print the OreDict names of GTCEu material ore blocks",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "logoFile": "",
